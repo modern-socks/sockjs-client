@@ -29,20 +29,12 @@
     "eventsource": "^1.0.7",
     "faye-websocket": "^0.11.3",
     "inherits": "^2.0.4",
-    "json3": "^3.3.3",
     "url-parse": "^1.4.7"
   },
   "devDependencies": {
-    "browserify": "^16.5.1",
     "envify": "^4.0.0",
     "eslint": "^7.6.0",
     "expect.js": "~0.3.1",
-    "gulp": "^4.0.2",
-    "gulp-header": "^2.0.9",
-    "gulp-rename": "^2.0.0",
-    "gulp-replace": "^1.0.0",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^3.0.2",
     "karma": "^5.1.1",
     "karma-browserify": "^7.0.0",
     "karma-browserstack-launcher": "^1.6.0",
@@ -54,7 +46,9 @@
     "serve-static": "^1.14.1",
     "sockjs": "^0.3.21",
     "vinyl-buffer": "~1.0.0",
-    "vinyl-source-stream": "^2.0.0"
+    "vinyl-source-stream": "^2.0.0",
+    "webpack": "^5.20.0",
+    "webpack-cli": "^4.5.0"
   },
   "homepage": "http://sockjs.org",
   "keywords": [
@@ -68,6 +62,7 @@
     "url": "https://github.com/sockjs/sockjs-client.git"
   },
   "scripts": {
+    "build": "webpack",
     "test": "mocha tests/node.js",
     "test:bundle": "gulp testbundle",
     "test:browser_local": "npm run test:bundle && npx karma start --browsers Chrome",
